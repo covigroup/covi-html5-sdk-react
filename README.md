@@ -170,16 +170,14 @@ const FirstPage = () => {
 
     useEffect(() => {
         if (coviScriptStatus === 'ready' && publisherScriptStatus === 'ready' && isCoviSdkFirstLoaded === true) {
-            const { runCoviSdk } = window;
             if (typeof runCoviSdk === 'function') {
                 runCoviSdk();
                 setIsCoviSdkFirstLoaded((isCoviSdkFirstLoaded) => false);
             }
         } else if (coviScriptStatus === 'ready' && publisherScriptStatus === 'ready' && isCoviSdkFirstLoaded === false) {
-            const { initCoviSdk } = window;
             if (typeof initCoviSdk === 'function') initCoviSdk();
         }
-    }, [coviScriptStatus, publisherScriptStatus, isCoviSdkFirstLoaded]);
+    }, [coviScriptStatus, publisherScriptStatus]);
 
     return (
         <>
