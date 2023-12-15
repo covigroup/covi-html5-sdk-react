@@ -129,7 +129,7 @@ export default function useScript(url) {
   - 동영상 플레이어를 인라인으로 재생하기 위해 video element에 [`playsInline`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#playsinline) 속성을 추가합니다.
 ```
 export const PlayerSample = () => {
-    return <video className='covi_player' controls playsInline></video>;
+    return <video className='covi_player' playsInline></video>;
 };
 ```
 
