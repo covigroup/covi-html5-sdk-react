@@ -127,9 +127,11 @@ export default function useScript(url) {
 
 ### 1) `className`이 `covi_player`인 video element를 리턴하는 `PlayerSample` 컴포넌트를 생성합니다.
   - 동영상 플레이어를 인라인으로 재생하기 위해 video element에 [`playsInline`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#playsinline) 속성을 추가합니다.
+  - 동영상 플레이어를 자동재생하기 위해 video element에 `autoPlay`, `muted` 속성을 추가합니다.
+
 ```
 export const PlayerSample = () => {
-    return <video className='covi_player' playsInline></video>;
+    return <video className='covi_player' playsInline autoPlay muted></video>;
 };
 ```
 
